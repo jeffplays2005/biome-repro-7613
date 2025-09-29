@@ -1,0 +1,114 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+  "files": {
+    "includes": [
+      "**",
+      "!node_modules",
+      "!package-lock.json",
+      "!coverage",
+      "!dist",
+      "!build",
+      "!build-locked-base",
+      "!build-locked-shed",
+      "!build-locked-sailor",
+      "!**/.vscode",
+      "!**/.idea",
+      "!**/.zed",
+      "!src/assets",
+      "!src/updates.js"
+    ],
+    "ignoreUnknown": true
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "useEditorconfig": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noStaticElementInteractions": "off",
+        "useButtonType": "off",
+        "useFocusableInteractive": "off",
+        "useKeyWithClickEvents": "off",
+        "useKeyWithMouseEvents": "off"
+      },
+      "complexity": {
+        "noUselessConstructor": "warn",
+        "noUselessFragments": "warn",
+        "noVoid": "warn",
+        "useLiteralKeys": "warn",
+        "useOptionalChain": "warn"
+      },
+      "correctness": {
+        "noChildrenProp": "error",
+        "noConstantCondition": "warn",
+        "noInvalidUseBeforeDeclaration": "off",
+        "noNodejsModules": "warn",
+        "noUnusedVariables": "warn",
+        "useExhaustiveDependencies": "error",
+        "useHookAtTopLevel": "error",
+        "useJsxKeyInIterable": "warn"
+      },
+      "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
+      "style": {
+        "noNamespace": "off",
+        "noNestedTernary": "off",
+        "noNonNullAssertion": "off",
+        "noParameterAssign": "off",
+        "noRestrictedGlobals": {
+          "level": "error",
+          "options": {
+            "deniedGlobals": {
+              "screen": "in case we forgot to import screen from RTL (use window.screen if intentional)",
+              "process": "use import.meta.env.* instead of process.env.*",
+              "Comment": "in case we forgot to import Comment from root.ts"
+            }
+          }
+        },
+        "noRestrictedImports": "error",
+        "useBlockStatements": "warn",
+        "useCollapsedElseIf": "warn",
+        "useConst": "error",
+        "useDefaultParameterLast": "off",
+        "useForOf": "off",
+        "useSingleVarDeclarator": "off",
+        "useTemplate": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noCommentText": "error",
+        "noDuplicateJsxProps": "warn",
+        "noEmptyBlockStatements": "off",
+        "noExplicitAny": "info",
+        "noPrototypeBuiltins": "warn",
+        "useGuardForIn": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "es5",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    }
+  },
+  "html": { "formatter": { "selfCloseVoidElements": "always" } },
+  "assist": { "enabled": true }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "biome repro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "./",
+  "scripts": {
+    "format": "biome format",
+    "format:all": "biome format .",
+    "format:fix": "biome format --write",
+    "lint": "biome lint",
+    "lint:all": "biome lint .",
+    "lint:fix": "biome lint --write"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "2.2.2",
+    "vitest": "3.2.4"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "volta": {
+    "node": "22.18.0"
+  }
+}
