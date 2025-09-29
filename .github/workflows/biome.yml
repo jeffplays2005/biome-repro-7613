@@ -1,0 +1,21 @@
+name: run biome
+
+on:
+    [workflow_dispatch]
+
+jobs:
+    biome:
+        name: Biome
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v5
+    
+          - name: Setup Biome
+            uses: biomejs/setup-biome@v2
+            with:
+                version: "2.2.2"
+    
+          - name: Run Biome
+            run: biome lint --fix --unsafe
+    
