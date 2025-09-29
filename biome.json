@@ -5,17 +5,8 @@
       "**",
       "!node_modules",
       "!package-lock.json",
-      "!coverage",
       "!dist",
-      "!build",
-      "!build-locked-base",
-      "!build-locked-shed",
-      "!build-locked-sailor",
-      "!**/.vscode",
-      "!**/.idea",
-      "!**/.zed",
-      "!src/assets",
-      "!src/updates.js"
+      "!build"
     ],
     "ignoreUnknown": true
   },
@@ -68,13 +59,7 @@
         "noParameterAssign": "off",
         "noRestrictedGlobals": {
           "level": "error",
-          "options": {
-            "deniedGlobals": {
-              "screen": "in case we forgot to import screen from RTL (use window.screen if intentional)",
-              "process": "use import.meta.env.* instead of process.env.*",
-              "Comment": "in case we forgot to import Comment from root.ts"
-            }
-          }
+          "options": {}
         },
         "noRestrictedImports": "error",
         "useBlockStatements": "warn",
